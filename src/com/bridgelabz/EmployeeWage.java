@@ -12,12 +12,14 @@ public class EmployeeWage {
     public static void main(String[] args) {
         System.out.println("----Welcome to employee wage computation problem----\n");
 
-        EmployeeWage obj = new EmployeeWage();
-
-        obj.calculateEmployeeWage();
+        calculateEmployeeWage("Google", 50, 15, 200);
+        calculateEmployeeWage("Amazon", 80, 20, 120);
+        calculateEmployeeWage("Meta", 60, 20, 100);
+        calculateEmployeeWage("Netflix", 90, 18, 220);
+        calculateEmployeeWage("Tesla", 100, 20, 250);
     }
 
-    void calculateEmployeeWage() {
+    private static void calculateEmployeeWage(String companyName, int empRatePerHour, int numOfWorkingDays, int maxHoursInMonth) {
         int totalWorkingDays = 1;
         int totalWage = 0;
         int empWorkingDays = 0;
@@ -57,7 +59,7 @@ public class EmployeeWage {
         System.out.println("***************");
         System.out.println("Employee work for total of " + empWorkingDays + " days.");
         System.out.println("Employee works for total of " + totalEmpHrs + "hours.");
-        System.out.println("Total salary of the employee after " + WORKING_DAYS_PER_MONTH + " days is : " + totalWage);
-
+        System.out.println("Total salary of the employee after " + WORKING_DAYS_PER_MONTH + " days is : " + totalWage+"\n");
+        System.out.println(companyName+" company Employee Monthly Wage : $" + totalWage+"\n\n");
     }
 }
